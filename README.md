@@ -1,1 +1,1 @@
-# Student-Managment-System---Java
+# Student Managment System using Java
