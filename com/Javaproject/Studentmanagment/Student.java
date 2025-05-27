@@ -7,15 +7,19 @@ public class Student {
     private long PhoneNumber;
     private String email;
     private String address;
+    private String Course;
+    private int enrollmentYear;
 
 
-    public Student(int studentId, String name, String gender, long phoneNumber, String email, String address) {
+    public Student(int studentId, String name, String gender, long phoneNumber, String email, String address,String course,int year) {
         StudentId = studentId;
         Name = name;
         Gender = gender;
         PhoneNumber = phoneNumber;
         this.email = email;
         this.address = address;
+        Course = course;
+        enrollmentYear = year;
     }
 
     public int getStudentId() {
