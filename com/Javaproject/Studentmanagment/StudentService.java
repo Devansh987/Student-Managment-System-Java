@@ -21,6 +21,16 @@ public class StudentService {
         }
     }
 
-
+    boolean deleteStudentById(int id){
+            for(Student s : record){
+                if(id==s.getStudentId()){
+                    record.remove(s);
+                    System.out.print("Student with id "+id+"is removed.");
+                    return true;
+            }
+        }
+        System.out.println("Student with ID " + id + " not found.");
+        return false;
+    }
 
 }

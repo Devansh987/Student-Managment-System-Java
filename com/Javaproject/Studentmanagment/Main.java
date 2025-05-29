@@ -34,6 +34,13 @@ public class Main {
         StudentService service = new StudentService();
         service.addStudent(new Student(studentId,studentName,gender,phoneNo,email,address,course,EnrollmentYear));
         service.viewAll();
+        System.out.print("Enter student ID to delete: ");
+        int idToDelete = scanner.nextInt();
+        boolean deleted = service.deleteStudentById(idToDelete);
+        if (!deleted) {
+            System.out.println("Deletion failed: No student with ID " + idToDelete);
+        }
+        service.viewAll();
 
 
 
