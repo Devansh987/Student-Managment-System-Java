@@ -33,4 +33,24 @@ public class StudentService {
         return false;
     }
 
+    public boolean updateStudent(int id,Student updated){
+        for(Student s : record){
+            if(s.getStudentId()==id){
+                s.setName(updated.getName());
+                s.setStudentId(updated.getStudentId());
+                s.setGender(updated.getGender());
+                s.setPhoneNumber(updated.getPhoneNumber());
+                s.setEmail(updated.getEmail());
+                s.setAddress(updated.getAddress());
+                s.setEnrollmentYear(updated.setEnrollmentYear());
+                System.out.println("Students details updated");
+                return true;
+            }
+        }
+        System.out.println("Student with Id "+id+" not found");
+        return false;
+
+    }
+
+
 }

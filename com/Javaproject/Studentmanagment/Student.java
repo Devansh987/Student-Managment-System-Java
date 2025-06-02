@@ -22,6 +22,38 @@ public class Student {
         enrollmentYear = year;
     }
 
+    public void setStudentId(int studentId) {
+        StudentId = studentId;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public void setGender(String gender) {
+        Gender = gender;
+    }
+
+    public void setPhoneNumber(long phoneNumber) {
+        PhoneNumber = phoneNumber;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setCourse(String course) {
+        Course = course;
+    }
+
+    public void setEnrollmentYear(int enrollmentYear) {
+        this.enrollmentYear = enrollmentYear;
+    }
+
     public int getStudentId() {
         return StudentId;
     }

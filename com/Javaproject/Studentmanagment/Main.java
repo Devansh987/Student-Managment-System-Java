@@ -40,6 +40,8 @@ public class Main {
         if (!deleted) {
             System.out.println("Deletion failed: No student with ID " + idToDelete);
         }
+        int idToUpdate = sc.nextInt();
+
         service.viewAll();
 
 
