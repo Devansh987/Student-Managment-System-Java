@@ -12,7 +12,7 @@ public class StudentService {
         System.out.println(student.getName()+"Sucessfully added");
     }
 
-    void viewAll(){
+    void viewAllStudent(){
         if(record.size()==0) System.out.println("No Record available");
         else{
             for(Student s : record){
@@ -42,7 +42,7 @@ public class StudentService {
                 s.setPhoneNumber(updated.getPhoneNumber());
                 s.setEmail(updated.getEmail());
                 s.setAddress(updated.getAddress());
-                s.setEnrollmentYear(updated.setEnrollmentYear());
+                s.setEnrollmentYear(updated.getEnrollmentYear());
                 System.out.println("Students details updated");
                 return true;
             }
@@ -50,6 +50,30 @@ public class StudentService {
         System.out.println("Student with Id "+id+" not found");
         return false;
 
+    }
+
+    public void searchByName(String name){
+        boolean found = false;
+        for(Student s : record){
+            if(s.getName().equalsIgnoreCase(name)){
+                System.out.println(s);
+                found = true;
+            }
+
+        }
+        if(!found) System.out.print("No Student Found with given name");
+    }
+
+    public void searchByCourse(String Course){
+        boolean found = false;
+        for(Student s : record){
+            if(s.getCourse().equalsIgnoreCase(Course)){
+                System.out.println(s);
+                found = true;
+            }
+
+        }
+        if(!found) System.out.print("No Student Found with given name");
     }
 
 

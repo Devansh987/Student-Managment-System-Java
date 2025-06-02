@@ -74,6 +74,14 @@ public class Student {
         return email;
     }
 
+    public String getCourse() {
+        return Course;
+    }
+
+    public int getEnrollmentYear() {
+        return enrollmentYear;
+    }
+
     public String getAddress() {
         return address;
     }
