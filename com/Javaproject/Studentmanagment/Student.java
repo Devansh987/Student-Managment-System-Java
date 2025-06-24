@@ -85,4 +85,18 @@ public class Student {
     public String getAddress() {
         return address;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "StudentId=" + StudentId +
+                ", Name='" + Name + '\'' +
+                ", Gender='" + Gender + '\'' +
+                ", PhoneNumber=" + PhoneNumber +
+                ", email='" + email + '\'' +
+                ", address='" + address + '\'' +
+                ", Course='" + Course + '\'' +
+                ", enrollmentYear=" + enrollmentYear +
+                '}';
+    }
 }

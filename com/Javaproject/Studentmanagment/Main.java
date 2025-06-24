@@ -13,7 +13,8 @@ import java.util.*;
                     System.out.println("4. Update Student");
                     System.out.println("5. Search by Name");
                     System.out.println("6. Search by Course");
-                    System.out.println("7. Exit");
+                    System.out.println("7. Sorting by StudentId and Name");
+                    System.out.println("8. Exit");
                     System.out.print("Enter your choice: ");
 
                     String choice = sc.nextLine();
@@ -88,7 +89,22 @@ import java.util.*;
                             service.searchByCourse(searchCourse);
                             break;
 
+
                         case "7":
+                            String sortingMethod = sc.nextLine();
+                            switch (sortingMethod) {
+                                case "Name":
+                                    service.sortByName();
+                                    break;
+                                case "Id":
+                                    service.sortById();
+                                    break;
+                                default:
+                                    System.out.println("Invalid choice.Please Enter a valid sorting Method");
+                            }
+
+
+                        case "8":
                             System.out.println("Exiting program. Goodbye!");
                             sc.close();
                             return;

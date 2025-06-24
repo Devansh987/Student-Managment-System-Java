@@ -74,7 +74,22 @@ public class StudentService {
 
         }
         if(!found) System.out.print("No Student Found with given name");
+
     }
+
+    void sortByName(){
+        record.sort((s1,s2)-> s1.getName().compareToIgnoreCase(s2.getName()));
+        System.out.println("Sorted by Name (A–Z):");
+        viewAllStudent();
+    }
+
+    void sortById(){
+        record.sort((s1,s2)-> Integer.compare(s1.getStudentId(), s2.getStudentId()));
+        System.out.print("Sort by Student Id");
+
+    }
+
+
 
 
 }
