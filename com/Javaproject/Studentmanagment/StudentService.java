@@ -3,6 +3,7 @@ package com.Javaproject.Studentmanagment;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StudentService {
     private List<Student> record = new ArrayList<>();
@@ -88,6 +89,15 @@ public class StudentService {
         System.out.print("Sort by Student Id");
 
     }
+
+    void filterByCourse(String course){
+        record.stream().filter(s->s.getCourse().equalsIgnoreCase(course)).forEach(System.out::println);
+    }
+
+    void filterByEnrollmentYear(int year){
+        record.stream().filter(s->s.setEnrollmentYear()>=year).forEach(System.out::println);
+    }
+
 
 
 

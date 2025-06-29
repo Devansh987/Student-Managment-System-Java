@@ -14,6 +14,7 @@ import java.util.*;
                     System.out.println("5. Search by Name");
                     System.out.println("6. Search by Course");
                     System.out.println("7. Sorting by StudentId and Name");
+                    System.out.println("8 Filtering Students by Course and Enrollment year");
                     System.out.println("8. Exit");
                     System.out.print("Enter your choice: ");
 
@@ -102,12 +103,31 @@ import java.util.*;
                                 default:
                                     System.out.println("Invalid choice.Please Enter a valid sorting Method");
                             }
-
+                            break;
 
                         case "8":
+                            String choose = sc.nextLine();
+                            switch (choose){
+                                case "course":
+                                    String x = sc.nextLine();
+                                    service.filterByCourse(x);
+                                    break;
+
+                                case  "year":
+                                    int a = sc.nextInt();
+                                    service.filterByEnrollmentYear();
+                                    break;
+
+                                default:
+                                    System.out.println("Invalid choice");
+                            }
+                            break;
+
+
+                        case "9":
                             System.out.println("Exiting program. Goodbye!");
                             sc.close();
-                            return;
+                            break;
 
                         default:
                             System.out.println("Invalid choice. Please enter a number between 1 and 7.");
